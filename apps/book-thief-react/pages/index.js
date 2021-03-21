@@ -1,9 +1,11 @@
-import Navbar from "../widgets/navbar/Navbar"
-
+import { Divider } from "../components"
+import { Navbar, BookGrid } from "../widgets"
 export default function Home() {
   return (
-    <>
-    <Navbar/>
-    </>
+      <div className="container">
+        <Navbar />
+        <Divider/>
+        <BookGrid />
+      </div>
   )
 }

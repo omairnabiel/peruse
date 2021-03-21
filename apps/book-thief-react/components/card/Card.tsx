@@ -1,26 +1,46 @@
 import React from "react"
 
-
+import styles from "./Card.module.scss"
 interface Props {
-    imagePath: string;
-    content: string;
-
+    className?: string;
 }
 
-export default function Card({ imagePath, content }: Props) {
+export const Card= ({ className, children }: React.PropsWithChildren<Props>) => {
     return (
-        <div className="card">
-            <div className="card-image">
-                <figure className="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image" />
-                </figure>
+        <>
+            <div className={`card ${styles.container} ${className || ""}`}>
+                {children}
             </div>
-            <div className="card-content">
-                <div className="content">
-                    {content}
-                    <br />
-                </div>
+        </>
+    )
+}
+
+export const CardHeader= ({ children }: React.PropsWithChildren<{}>) => {
+    return (
+        <header className="card-header">
+            {children}
+        </header>
+    )
+}
+
+interface CardContentProps {
+    className?: string;
+}
+export const CardContent = ({ children, className }: React.PropsWithChildren<CardContentProps>) => {
+    return (
+        <div className={`"card-content ${styles['no-padding']}`} style={{height:'100%'}}>
+            <div className={`content  ${className || ""}`}>
+                {children}
             </div>
         </div>
     )
 }
+
+export const CardFooter = ({ children }: React.PropsWithChildren<{}>) => {
+    return (
+        <footer className="card-footer">
+            {children}
+        </footer>
+    )
+}
+

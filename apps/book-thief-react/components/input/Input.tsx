@@ -14,13 +14,14 @@ interface Props {
     hasIconRight?: boolean;
     iconLeft?: string;
     iconRight?: string;
+    className?: string
 }
 
-export default function CustomInput({ value, handleChange, placeholder, type, hasIconLeft, hasIconRight, iconLeft, iconRight, size }: Props) {
+export const Input = ({ value, handleChange, placeholder, type, hasIconLeft, hasIconRight, iconLeft, iconRight, size , className}: Props) => {
     return (
             <div className={`control ${hasIconLeft ? "has-icons-left": ""} ${hasIconRight? "has-icons-right": ""}`}>
                 <input
-                    className={`input is-rounded is-medium is-${size || "medium"}`}
+                    className={`input is-rounded is-medium is-${size || "medium"} ${className}`}
                     type={type}
                     placeholder={placeholder}
                     value={value}

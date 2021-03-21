@@ -1,5 +1,5 @@
 import React from "react"
-import Icon from "../../../components/icon-button/IconButton"
+import { IconButton } from "../../../components"
 
 export default function ActionButtons(){
     const buttonTypes = [
@@ -23,7 +23,7 @@ export default function ActionButtons(){
         {buttonTypes.map(button => {
             return (
             <span className="ml-4 is-clickable">
-            <Icon name={button.name} size={1.5} onClickHandler={button.onClickHandler}/>
+            <IconButton key={button.name} name={button.name} size={1.5} onClickHandler={button.onClickHandler}/>
             </span>
             )
         })

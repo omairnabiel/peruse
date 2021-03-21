@@ -6,9 +6,10 @@ interface Props {
      name: string;
      size: number;
      title?: string
+     className?: string;
      onClickHandler: React.MouseEventHandler<HTMLElement>
 }
-export default function IconButton({name, title, size, onClickHandler}:Props) {
+export const IconButton = ({name, title, size, onClickHandler}:Props) => {
     return (
         <span className="icon-text" onClick={onClickHandler}>
             <span className={`icon ${style[`scale-hover`]}`}>

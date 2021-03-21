@@ -1,0 +1,12 @@
+.book-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+    row-gap: 15px;
+    margin-top: 20px;
+}
+
+.book-tile-container {
+    height: 250px;
+    width: 150px
+}

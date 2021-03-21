@@ -1,7 +1,7 @@
 import React, { useState} from "react"
-import Input from "../../../components/input/Input"
+import { Input } from "../../../components/input/Input"
 
-import style from "./NavbarSearch.module.scss"
+import styles from "./NavbarSearch.module.scss"
 
 export default function SearchInput() {
     const [search, setSearch] = useState("")
@@ -11,8 +11,8 @@ export default function SearchInput() {
     }
 
     return(
-    <div className={`${style[`search-input`]} is-align-items-center`}>
-        <Input value={search} handleChange={handleChange} placeholder={"Search"} type={"text"} size={"medium"} hasIconRight={true} iconRight={"search"}/>
+    <div className={`${styles[`container`]} is-align-items-center`}>
+        <Input className={`${styles[`search-input`]}`}  value={search} handleChange={handleChange} placeholder={"Search"} type={"text"} size={"medium"} hasIconRight={true} iconRight={"search"}/>
     </div>
     )
 
