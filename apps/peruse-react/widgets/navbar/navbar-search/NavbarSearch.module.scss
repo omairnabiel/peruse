@@ -1,0 +1,23 @@
+$transform-scale: 1.02;
+
+.container {
+    width: 70%;
+}
+
+.search-input {
+    transition: transform .2s;
+    transform: scale(1);
+
+    &:focus{
+        outline: none !important;
+        border-color: transparent;
+        box-shadow: none;
+    }
+
+    &:hover{
+        transition:  transform .2s;
+        transform: scale($transform-scale);
+    }
+}
+
+
