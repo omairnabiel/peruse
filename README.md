@@ -1,2 +1,2 @@
 # Peruse
-Peruse is a contranym. Contranym is word which can have two completey opposite meanings at a same time. Peruse means to read thouroughly, carefully, in detail and it also means to overlook or skim through, which is exactly what you can do using this. Read a book thouroughly , add highlights and notes and comeback later to skim through your notes and highlights to get the bigger picture
+Peruse is a contranym. Contranym is word which can have two completey opposite meanings at a same time. Peruse means to read thoroughly, carefully, in detail and it also means to overlook or skim through, which is exactly what you can do here. Read a book thoroughly , add highlights and then comeback later to skim through your notes and highlights to recall the full context
