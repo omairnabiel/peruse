@@ -1,12 +1,41 @@
+$bookmark-opacity: (
+    "visible": 1,
+    "hidden": 0
+);
+
 .book-grid{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 10px;
     row-gap: 15px;
     margin-top: 20px;
+    padding: 5px
 }
 
 .book-tile-container {
-    height: 250px;
-    width: 150px
+    transition: transform .2s;
+    transform: translateY(0px);
+
+    height: 260px;
+    width: 160px;
+
+    cursor: pointer;
+    
+    &:hover .bookmark-icon{
+        opacity: map-get($bookmark-opacity , "visible" );
+    }
+
+    &:hover {
+        box-shadow: 1px 1px 3px 1px rgb(60 64 67 / 30%), -1px -1px 5px 2px rgb(60 64 67 / 30%);
+        transition: transform .2s;
+        transform: translateY(-1px);
+    }
+}
+
+.bookmark-icon {
+    height:20px;
+    width: 20px;
+    position: absolute; 
+    right:0;
+    opacity: map-get($bookmark-opacity , "hidden" );
 }

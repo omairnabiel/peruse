@@ -1,14 +1,18 @@
-.small {
-    font-size: 1.4rem;
-    font-weight:bold;
-}
+.heading {
+    font-family: 'Mina', sans-serif !important;
+    font-weight:400 !important;
 
-.medium {
-    font-size: 1.6rem;
-    font-weight:bold;
-}
+    &-small {
+        font-size: 1.4rem;
+    }
 
-.large {
-    font-size: 2rem;
-    font-weight:bold;
+    &-medium {
+        font-size: 1.6rem;
+    }
+
+    &-large {
+        font-size: 2rem;
+
+    }
+
 }

@@ -5,7 +5,7 @@ import style from "./Logo.module.scss"
 export const Logo = () => {
    return(     
     <a>
-      <img src="book-thief.svg" className={style.logo}/>
+      <img src="peruse.svg" className={style.logo}/>
     </a>
 
     

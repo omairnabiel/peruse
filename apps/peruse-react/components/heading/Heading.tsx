@@ -9,6 +9,6 @@ interface Props {
 }
 export const Heading = ({ size, title, className }: Props) => {
    return (
-       <div className={`${styles[size]} ${className || ""}`}>{title}</div>
+       <div className={`${styles[`heading-${size}`]} ${className || ""}`}>{title}</div>
    )
 }

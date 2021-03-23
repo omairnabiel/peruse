@@ -40,9 +40,7 @@ export const BookGrid = () => {
         <div className={styles['book-grid']}>
             {
                 books.map(book => (
-                <div className={styles['book-tile-container']} key={book.id}>
-                <BookTile name={book.name} cover={book.cover}/>
-                </div>
+                    <BookTile key={book.id} className={styles['book-tile-container']} name={book.name} cover={book.cover} />
                 ))
             }
         </div>
