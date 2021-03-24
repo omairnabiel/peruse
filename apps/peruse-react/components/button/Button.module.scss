@@ -1,7 +1,7 @@
 @import "styles/colors.scss";
 
 .button {
-    font-weight: 500;
+    font-weight: 400;
     border-radius: 16px;
     text-align: center;
     padding: 8px 16px 8px 16px;
@@ -12,6 +12,10 @@
 
     &:hover {
         background-color: $hover-gray;
-        color: $blue !important;
+        color:  $pink !important;
+    }
+
+    &:focus {
+        outline: none;
     }
 }

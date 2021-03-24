@@ -1,28 +1,17 @@
 import React from "react"
-import { Button } from "../../components"
+
+import styles from "./Toolbar.module.scss"
+
+import { Button, Select } from "../../components"
 
 export const Toolbar = () => {
-    
-    const buttons = [
-        {
-            title: "Books",
-            onClick: () => { }
-        },
-        {
-            title: "Highlights",
-            onClick: () => { }
-        }
-    ]
 
     return (
         <div className="is-flex">
-            {
-                buttons.map(({ title, onClick }) => 
-                    <div className="mr-3">
-                        <Button title={title} onClick={onClick} />
-                    </div>
-                )
-            }
+            <Select label="Books" options={["Books", "Highlights"]}/>
+            <Button title="Upload" onClick={()=>{}}>
+            <div className={`${styles['button-icon']} fas fa-arrow-up`}></div>
+            </Button>
         </div>
     )
 }
