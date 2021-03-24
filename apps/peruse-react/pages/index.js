@@ -1,13 +1,13 @@
-import { Divider, Heading } from "../components"
-import { Navbar, BookGrid } from "../widgets"
+import { Divider, Heading, Button } from "../components"
+import { Navbar, BookGrid , Toolbar} from "../widgets"
 export default function Home() {
   return (
     <div className="container">
       <Navbar />
-      <div className="mt-30">
-        <Heading size={"large"} title={"Books"} />
+      <div className="mt-30 mb-20">
+        <Heading size={"large"} title={"Dashboard"} />
       </div>
-      <Divider />
+      <Toolbar/>
       <BookGrid />
     </div>
   )

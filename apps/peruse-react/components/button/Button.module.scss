@@ -1,0 +1,17 @@
+@import "styles/colors.scss";
+
+.button {
+    font-weight: 500;
+    border-radius: 16px;
+    text-align: center;
+    padding: 8px 16px 8px 16px;
+    border: 1px solid $light-gray;
+    background-color: white;
+    cursor: pointer;
+    color: $font-color;
+
+    &:hover {
+        background-color: $hover-gray;
+        color: $blue !important;
+    }
+}

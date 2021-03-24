@@ -5,7 +5,7 @@ $bookmark-opacity: (
 
 .book-grid{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
     row-gap: 15px;
     margin-top: 20px;
@@ -16,9 +16,8 @@ $bookmark-opacity: (
     transition: transform .2s;
     transform: translateY(0px);
 
-    height: 260px;
-    width: 160px;
-
+    width: 350px;
+    height: 190px;
     cursor: pointer;
     
     &:hover .bookmark-icon{

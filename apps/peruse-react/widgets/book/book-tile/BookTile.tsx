@@ -7,15 +7,18 @@ interface Props {
     className?: string;
 }
 
-export const BookTile = ({ cover, name, className , children}: React.PropsWithChildren<Props>) => {
+export const BookTile = ({ cover, name, className, children }: React.PropsWithChildren<Props>) => {
     return (
         <>
             <div className={`${styles['container']} ${className || ""}`}>
-                <img src={cover} className={styles['cover']} />
-
+                <div className={styles['cover']}>
+                    <img src={cover} className={styles['cover']}/>
+                </div>  
                 <div className={styles['title-container']}>
-                    <div className={styles['category']}>Music</div>
+                    <div className={`tag is-dark ${styles['tag']}`}>Music</div>
                     <div className={styles['title']}>{name}</div>
+                    <div className={styles['legend']}>Highlights 12</div>
+                    <div className={styles['legend']}>Progress 60%</div>    
                 </div>
                 {children}
             </div>
