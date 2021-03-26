@@ -6,14 +6,15 @@ $bookmark-opacity: (
 );
 
 .book-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 25px;
-    row-gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 33.33%;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // column-gap: 25px;
+    // row-gap: 15px;
     margin-top: 20px;
     padding: 5px;
-    justify-content: center;
-    justify-items: center;
+    justify-content: space-between;
     padding: 10px 0px 10px 0px;
 }
 

@@ -1,4 +1,4 @@
-$transform-scale: 1.02;
+$transform-scale: 1.01;
 
 .container {
     width: 70%;
@@ -17,6 +17,8 @@ $transform-scale: 1.02;
     &:hover{
         transition:  transform .2s;
         transform: scale($transform-scale);
+        box-shadow: none;
+
     }
 }
 
