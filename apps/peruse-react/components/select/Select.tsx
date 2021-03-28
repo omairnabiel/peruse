@@ -15,8 +15,6 @@ interface Props {
     isSearchable?: boolean;
 }
 
-
-
 export const Select = ({ label, options, handleChange, isMulti, isSearchable }: Props) => {
     let [isOpen, setIsOpen] = useState(false)
     let [selected, setSelected] = useState("")
@@ -26,36 +24,32 @@ export const Select = ({ label, options, handleChange, isMulti, isSearchable }: 
         setIsOpen(!isOpen)
     }
 
-    const optionsClickHandler = (option: Option) => {
+    const optionClickHandler = (option: Option) => {
         setIsOpen(false)
         setSelected(option.label)
         handleChange(option.value)
     }
 
-    const mousedownEventHandler = (event: MouseEvent) => {
+    const isOutsideClick = (event: MouseEvent) => {
         const clickedElement = (selectRef.current as any)
         if (!clickedElement?.contains(event.target)) setIsOpen(false)
     }
 
     useEffect(() => {
-        console.log("Options", options)
-        document.addEventListener("mousedown", mousedownEventHandler)
+        document.addEventListener("mousedown", isOutsideClick)
 
-        return () => document.removeEventListener("mousedown", mousedownEventHandler)
+        return () => document.removeEventListener("mousedown", isOutsideClick)
     },[])
 
 
     return (
         <div ref={selectRef} className={styles.container}>
-            <Button title={selected || label} onClick={selectClickHandler}>
-                <div className={`${styles['menu-button-icon']} fas fa-chevron-down`}></div>
-
-            </Button>
+            <Button title={selected || label} onClick={selectClickHandler} hasIcon={true} iconName="chevron-down"/>
             <div className={`${styles['menu']}`} style={{ display: isOpen ? 'block' : 'none' }}>
                 {
                     options &&
                     options.map(option => (
-                        <div className={`${styles['menu-item']}`} onClick={() => optionsClickHandler(option)}>
+                        <div className={`${styles['menu-item']}`} onClick={() => optionClickHandler(option)}>
                             {option.label}
                         </div>)
                     )

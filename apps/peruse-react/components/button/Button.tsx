@@ -5,13 +5,15 @@ import styles from "./Button.module.scss"
 interface Props {
     title: string
     clasName?: string
+    hasIcon?: boolean
+    iconName?: string
     onClick: React.MouseEventHandler
 }
-export const Button = ({title, onClick, children}:React.PropsWithChildren<Props>) => {
+export const Button = ({title, onClick, hasIcon, iconName, children}:React.PropsWithChildren<Props>) => {
     return (
         <button className={styles['button']} onClick={onClick}>
             {title}
-            {children}
+            {hasIcon && <div className={`${styles['button-icon']} fas fa-${iconName}`}/>}
         </button>
     )
 }
