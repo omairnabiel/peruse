@@ -21,9 +21,9 @@ export const Input = ({ value, handleChange, placeholder, type, hasIconLeft, has
     return (
             <div className={`control ${hasIconLeft ? "has-icons-left": ""} ${hasIconRight? "has-icons-right": ""}`}>
                 <input
-                    className={`input is-rounded is-medium is-${size || "medium"} ${className}`}
+                    className={`input is-rounded is-${size || "medium"} ${className}`}
                     type={type}
-                    placeholder={placeholder}
+                    placeholder={placeholder} 
                     value={value}
                     onChange={handleChange} />
                 <span className={`icon is-small ${hasIconLeft && "is-left"}`}>

@@ -23,6 +23,7 @@ export default function Home() {
 
   return (
     <div className="container">
+
       <Navbar />
      
       <Spacer marginTop='5' marginBottom='5'/>
