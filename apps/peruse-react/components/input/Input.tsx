@@ -9,29 +9,20 @@ interface Props {
 
     placeholder: string;
     type: string;
-
-    hasIconLeft?: boolean;
-    hasIconRight?: boolean;
-    iconLeft?: string;
-    iconRight?: string;
     className?: string
+    iconName?: string;
 }
 
-export const Input = ({ value, handleChange, placeholder, type, hasIconLeft, hasIconRight, iconLeft, iconRight, size , className}: Props) => {
+export const Input = ({ value, handleChange, placeholder, type, iconName, size, className }: Props) => {
     return (
-            <div className={`control ${hasIconLeft ? "has-icons-left": ""} ${hasIconRight? "has-icons-right": ""}`}>
-                <input
-                    className={`input is-rounded is-${size || "medium"} ${className}`}
-                    type={type}
-                    placeholder={placeholder} 
-                    value={value}
-                    onChange={handleChange} />
-                <span className={`icon is-small ${hasIconLeft && "is-left"}`}>
-                    <i className={`fas fa-${iconLeft}`}></i>
-                </span>
-                <span className={`icon is-small ${hasIconRight && "is-right"}`}>
-                    <i className={`fas fa-${iconRight}`}></i>
-                </span>
-            </div>
+        <div className={styles['container']}>
+            <input
+                className={`input is-rounded is-${size || "medium"} ${styles['input']} ${className}`}
+                type={type}
+                placeholder={placeholder}
+                value={value}
+                onChange={handleChange} />
+            <span className={`${styles['icon']} fas fa-${iconName}`}></span>
+        </div>
     )
 }

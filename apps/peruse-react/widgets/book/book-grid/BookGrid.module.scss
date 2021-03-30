@@ -12,12 +12,18 @@ $bookmark-opacity: (
     padding: 5px;
     justify-content: space-between;
     padding: 10px 0px 10px 0px;
+    gap: 10px;
 }
 
 .book-tile-container {
     transition: transform .2s;
     transform: translateY(0px);
 
+    // border-radius: 0px 0px 10px 0px;
+    border-bottom: 1px solid #dadce0;
+    border-top: 1px solid #dadce0;
+    border-radius: 0px 10px 10px 0px;
+    border-right: 1px solid #dadce0;
     width: 350px;
     height: 190px;
     cursor: pointer;

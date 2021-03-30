@@ -2,10 +2,7 @@
 
 .container {
     display: flex;
-    border-radius: 0px 10px 10px 0px;
-    border-right: 1px solid #dadce0;
     overflow: hidden;
-    margin-bottom: 40px;
 }
 
 .cover {
@@ -16,10 +13,6 @@
 .title-container {
     flex: 4;
     padding: 8px 6px 6px 6px;
-    border-radius: 0px 0px 10px 0px;
-    border-bottom: 1px solid #dadce0;
-    border-top: 1px solid #dadce0;
-
 }
 
 .title {
