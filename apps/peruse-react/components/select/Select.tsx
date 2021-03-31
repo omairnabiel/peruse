@@ -49,7 +49,7 @@ export const Select = ({ label, options, handleChange, isMulti, isSearchable }: 
                 {
                     options &&
                     options.map(option => (
-                        <div className={`${styles['menu-item']}`} onClick={() => optionClickHandler(option)}>
+                        <div key={option.value} className={`${styles['menu-item']}`} onClick={() => optionClickHandler(option)}>
                             {option.label}
                         </div>)
                     )

@@ -78,15 +78,10 @@ export const Highlights = () => {
                 <Spacer marginBottom="3" />
                 {
                     books.map(book => (
-                        <>
-                            <div>
-                                <div>
-                                    <img src={book.cover} />
-                                </div>
-                                <div>{book.name}</div>
-                            </div>
+                        <div key={book.id} className={styles['border-bottom']}>
+                            <BookTile key={book.id} className={styles['book-tile-container']} name={book.name} cover={book.cover} highlights={book.highlights} category={book.category} progress={book.progress} />
                             <Spacer marginBottom="3" />
-                        </>
+                        </div>
                     ))
                 }
 
@@ -95,8 +90,9 @@ export const Highlights = () => {
             <div className={styles['highlights']}>
                 <h1 className={styles['notes-highlights-heading']}>Your Notes and Highlights</h1>
                 <Spacer marginBottom="6" />
-                <div>
-                    <BookTile name={books[0].name} cover={books[0].cover} category={books[0].category} progress={books[0].progress}  className={styles['book-heading']}/>
+                <div className="is-flex">
+                    <img src={books[0].cover} style={{height: 80, width:60}}/>
+                    <p className={styles['highlights-book-heading']}>{books[0].name}</p>
                 </div>
                 <div className={styles['book-highlights']}></div>
 

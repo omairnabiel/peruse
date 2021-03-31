@@ -22,7 +22,7 @@ export default function ActionButtons(){
         <div>
         {buttonTypes.map(button => {
             return (
-            <span className="ml-4 is-clickable">
+            <span key={button.name} className="ml-4 is-clickable">
             <IconButton key={button.name} name={button.name} size={1.5} onClickHandler={button.onClickHandler}/>
             </span>
             )
