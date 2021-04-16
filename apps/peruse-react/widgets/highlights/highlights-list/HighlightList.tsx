@@ -5,7 +5,42 @@ import styles from "./HighlightList.module.scss"
 
 const highlights = [
     {
+        color: 'green',
+        text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
+        note: 'Greetings',
+        date: 'Today',
+        location: 'Page 82'
+    },
+    {
         color: 'red',
+        text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
+        note: 'Greetings',
+        date: 'Today',
+        location: 'Page 82'
+    },
+    {
+        color: 'blue',
+        text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
+        note: 'Greetings',
+        date: 'Today',
+        location: 'Page 82'
+    },
+    {
+        color: 'pink',
+        text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
+        note: 'Greetings',
+        date: 'Today',
+        location: 'Page 82'
+    },
+    {
+        color: 'yellow',
+        text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
+        note: 'Greetings',
+        date: 'Today',
+        location: 'Page 82'
+    },
+    {
+        color: 'orange',
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
         note: 'Greetings',
         date: 'Today',
