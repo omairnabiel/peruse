@@ -4,7 +4,7 @@ import { IconButton } from "../../../components"
 export default function ActionButtons(){
     const buttonTypes = [
         {
-            name: "bell",
+            name: "notifications",
             onClickHandler: ()=> {}
         },
         {
@@ -13,7 +13,7 @@ export default function ActionButtons(){
 
         },
         {
-            name: "user-circle",
+            name: "account_circle",
             onClickHandler: ()=> {} 
 
         }

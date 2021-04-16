@@ -1,13 +1,24 @@
 // colors
-$light-gray: #dadce0;
-$off-white: #e5e7eb;
-$blue: #1a73e8;
-$pink: #eb546a;
+$light-gray: hsl(220, 9%, 87%);
+$off-white: hsl(220, 13%, 91%);
+$blue: hsl(214, 82%, 51%);
+$pink: hsl(351, 79%, 63%);
 
 
 //  colors
 $font-color: hsl(217, 19%, 27%);
 $font-color-hover: hsl(221, 39%, 11%); 
 $hover-gray: hsla(214, 82%, 51%, 0.04);
-
 $hover-gray-100: hsl(220, 14%, 96%);
+
+// highlight-colors
+$highlight-yellow: hsl(41, 80%, 70%);
+$highlight-purple: hsl(249, 32%, 70%);
+$highlight-rose: hsl(343, 52%, 70%);
+$highlight-orange: hsl(11, 73%, 70%);
+$highlight-red: hsl(360, 67%, 60%);
+$highlight-turqoise: hsl(179, 100%, 70%);
+$highlight-green: hsl(168, 100%, 70%);
+$highlight-gray: hsl(196, 7%, 70%);
+$highlight-blue: hsl(206, 92%, 70%);
+$highlight-magenta: hsl(324, 54%, 60%);

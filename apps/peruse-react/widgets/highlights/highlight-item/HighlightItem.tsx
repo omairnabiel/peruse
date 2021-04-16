@@ -1,4 +1,4 @@
-import { IconButton } from "../../../components"
+import { Icon,IconButton } from "../../../components"
 
 import styles from "./HighlightItem.module.scss"
 
@@ -34,7 +34,7 @@ export const HighlightItem = ({ color, text, note, date, location }: React.Props
                 </div>
 
                 {note && <div className={styles['highlight-note']}>
-                    <div className="material-icons-outlined">description</div>
+                    <Icon name="description" size={1.2} type="outlined"/>
                     <div>
                         {note}
                     </div>

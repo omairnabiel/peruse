@@ -1,46 +1,47 @@
 import React from "react"
+import { HIGHLIGHT_COLOR } from "../../../constants/highlight_colors"
 import { HighlightItem } from "../highlight-item/HighlightItem"
 
 import styles from "./HighlightList.module.scss"
 
 const highlights = [
     {
-        color: 'green',
+        color: HIGHLIGHT_COLOR.BLUE,
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
         note: 'Greetings',
         date: 'Today',
         location: 'Page 82'
     },
     {
-        color: 'red',
+        color: HIGHLIGHT_COLOR.RED,
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
         note: 'Greetings',
         date: 'Today',
         location: 'Page 82'
     },
     {
-        color: 'blue',
+        color: HIGHLIGHT_COLOR.YELLOW,
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
         note: 'Greetings',
         date: 'Today',
         location: 'Page 82'
     },
     {
-        color: 'pink',
+        color: HIGHLIGHT_COLOR.MAGENTA,
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
         note: 'Greetings',
         date: 'Today',
         location: 'Page 82'
     },
     {
-        color: 'yellow',
+        color: HIGHLIGHT_COLOR.PURPLE,
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
         note: 'Greetings',
         date: 'Today',
         location: 'Page 82'
     },
     {
-        color: 'orange',
+        color: HIGHLIGHT_COLOR.ORANGE,
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
         note: 'Greetings',
         date: 'Today',

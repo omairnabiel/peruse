@@ -1,6 +1,8 @@
+@import "styles/colors.scss";
+
 .container {
     display: flex;
-    padding: 8px 4px 8px 8px;
+    padding: 8px 4px 8px 0  px;
     margin: 16px 0px 16px 0px;
     line-height: 28px;
 }
@@ -8,6 +10,11 @@
 .highlight-content {
     flex: 1;
     padding: 10px;
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+    border-right: 1px solid $light-gray;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 .actions {
     display: flex;
@@ -26,5 +33,6 @@
 .highlight-note {
     display: flex;
     align-items: center;
+    font-style: italic;
     gap: 8px;
 }

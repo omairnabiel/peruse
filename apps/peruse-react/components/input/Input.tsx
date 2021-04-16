@@ -22,7 +22,7 @@ export const Input = ({ value, handleChange, placeholder, type, iconName, size, 
                 placeholder={placeholder}
                 value={value}
                 onChange={handleChange} />
-            <span className={`${styles['icon']} fas fa-${iconName}`}></span>
+            <span className={`${styles['icon']} material-icons-outlined`}>{iconName}</span>
         </div>
     )
 }
