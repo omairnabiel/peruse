@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import { Input, Spacer } from "../../components"
 import { BookTile } from "../book"
 
+import { HighlightList } from "./highlights-list/HighlightList"
+
 import styles from "./Highlights.module.scss"
 
 export const Highlights = () => {
@@ -19,7 +21,7 @@ export const Highlights = () => {
             cover: "code_complete.jpg",
             highlights: 12,
             progress: 60,
-            category: 'Music',
+            category: 'Tech',
             lastRead: 'October 18, 2017'
         },
         {
@@ -28,7 +30,7 @@ export const Highlights = () => {
             cover: "code_complete.jpg",
             highlights: 12,
             progress: 60,
-            category: 'Music',
+            category: 'Tech',
             lastRead: 'October 18, 2017'
         },
         {
@@ -37,7 +39,7 @@ export const Highlights = () => {
             cover: "code_complete.jpg",
             highlights: 12,
             progress: 60,
-            category: 'Music',
+            category: 'Design',
             lastRead: 'October 18, 2017'
         },
         {
@@ -46,7 +48,7 @@ export const Highlights = () => {
             cover: "code_complete.jpg",
             highlights: 12,
             progress: 60,
-            category: 'Music',
+            category: 'Design',
             lastRead: 'October 18, 2017'
         },
         {
@@ -55,7 +57,7 @@ export const Highlights = () => {
             cover: "code_complete.jpg",
             highlights: 12,
             progress: 60,
-            category: 'Music',
+            category: 'Fiction',
             lastRead: 'October 18, 2017'
         },
         {
@@ -64,7 +66,7 @@ export const Highlights = () => {
             cover: "code_complete.jpg",
             highlights: 12,
             progress: 60,
-            category: 'Music',
+            category: 'Biography',
             lastRead: 'October 18, 2017'
         }
     ]
@@ -89,12 +91,14 @@ export const Highlights = () => {
 
             <div className={styles['highlights']}>
                 <h1 className={styles['notes-highlights-heading']}>Your Notes and Highlights</h1>
-                <Spacer marginBottom="6" />
+                <Spacer marginBottom="6"/>
                 <div className="is-flex">
                     <img src={books[0].cover} style={{height: 80, width:60}}/>
                     <p className={styles['highlights-book-heading']}>{books[0].name}</p>
                 </div>
-                <div className={styles['book-highlights']}></div>
+                <div className={styles['book-highlights']}>
+                    <HighlightList/>
+                </div>
 
             </div>
         </div>

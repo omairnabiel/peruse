@@ -26,7 +26,7 @@ export default function Home() {
 
       <Navbar />
      
-      <Spacer marginTop='5' marginBottom='5'/>
+      <Spacer marginTop='6' marginBottom='6'/>
 
       <div className="is-flex is-justify-content-space-between">
         <Select label="Books" options={options} handleChange={bookSelectHandleChange} />

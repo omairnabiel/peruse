@@ -11,7 +11,7 @@ interface Props {
 }
 export const IconButton = ({name, title, size, onClickHandler}:Props) => {
     return (
-        <span className="icon-text" onClick={onClickHandler}>
+        <span style={{cursor: 'pointer'}} className="icon-text" onClick={onClickHandler}>
             <span className={`icon ${style[`scale-hover`]}`}>
                 <i className={`fas fa-${name}`} style={{fontSize: `${size}rem`}}></i>
             </span>
