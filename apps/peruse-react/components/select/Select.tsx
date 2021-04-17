@@ -44,7 +44,7 @@ export const Select = ({ label, options, handleChange, isMulti, isSearchable }: 
 
     return (
         <div ref={selectRef} className={styles.container}>
-            <Button title={selected || label} onClick={selectClickHandler} hasIcon={true} iconName="chevron-down"/>
+            <Button title={selected || label} onClick={selectClickHandler} hasIcon={true} iconName="expand_more"/>
             <div className={`${styles['menu']}`} style={{ display: isOpen ? 'block' : 'none' }}>
                 {
                     options &&

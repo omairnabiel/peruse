@@ -1,8 +1,10 @@
-import { Icon,IconButton } from "../../../components"
+import { Icon, IconButton, Spacer } from "../../../components"
 
 import styles from "./HighlightItem.module.scss"
 
 interface Props {
+    cover: string;
+    name: string;
     color: string
     text: string
     note?: string
@@ -10,35 +12,48 @@ interface Props {
     location: string
 }
 
-export const HighlightItem = ({ color, text, note, date, location }: React.PropsWithChildren<Props>) => {
+export const HighlightItem = ({ color, text, note, cover, name, date, location }: React.PropsWithChildren<Props>) => {
     return (
         <div className={styles.container}>
-            <div style={{ border: `4px solid ${color}`, borderRadius: 12 }} />
+
+            {/* Highlight Color Bar */}
+            <div style={{ border: `2px solid ${color}`, borderRadius: 12 }} />
 
             <div className={styles['highlight-content']}>
-                <div className={`${styles.actions}`}>
-                    <div>
+                <div className={styles['title-bar']}>
+
+                    {/*  Highlight Book Heading */}
+                        <div className="is-flex">
+                            <img src={cover} style={{ height: 42, width: 32 }} />
+                            <div className={styles['book-info']}>
+                                <p className={styles['book-title']}>{name}</p>
+                                <p className={styles['highlight-info']}>{location} - {date}</p>
+                            </div>
+
+                        </div>
+                    
+
+                    {/* Highlight Actions */}
+                    <div className={`is-flex ${styles.actions}`}>
                         <IconButton name="favorite_border" size={1.5} onClickHandler={() => { }} />
-                    </div>
-                    <div>
-                        <IconButton name="more_horiz" size={1.5} onClickHandler={() => { }} />
+                        <Spacer marginLeft="1" marginRight="1" />
+                        <IconButton name="delete" size={1.5} onClickHandler={() => { }} />
                     </div>
                 </div>
 
-                <div className={styles['highlight-info']}>
-                    {location}
-                </div>
-
+                {/* Highlight Text */}
                 <div className={styles['highlight-text']}>
                     {text}
                 </div>
 
+                {/* Highlight Note */}
                 {note && <div className={styles['highlight-note']}>
-                    <Icon name="description" size={1.2} type="outlined"/>
+                    <Icon name="description" size={1.2} type="outlined" />
                     <div>
                         {note}
                     </div>
-                </div>}
+                </div>
+                }
 
             </div>
 

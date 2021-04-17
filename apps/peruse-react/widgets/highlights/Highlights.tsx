@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Input, Spacer } from "../../components"
+import { Button, Input, Spacer } from "../../components"
 import { BookTile } from "../book"
 
 import { HighlightList } from "./highlights-list/HighlightList"
@@ -72,35 +72,30 @@ export const Highlights = () => {
     ]
 
     return (
-        <div className={styles['container']}>
-            <div className={styles['books-list']}>
-                <div className={styles['input-container']}>
-                    <Input className={`${styles[`input`]}`} value={search} handleChange={handleChange} placeholder={"Search Books"} type={"text"} size={"medium"} iconName={"search"} />
-                </div>
-                <Spacer marginBottom="3" />
-                {
-                    books.map(book => (
-                        <div key={book.id} className={styles['border-bottom']}>
-                            <BookTile key={book.id} className={styles['book-tile-container']} name={book.name} cover={book.cover} highlights={book.highlights} category={book.category} progress={book.progress} />
-                            <Spacer marginBottom="3" />
-                        </div>
-                    ))
-                }
+        <>
 
+            {/* Highlight Heading */}
+            <Spacer marginTop="6" />
+            <h1 className={styles['notes-highlights-heading']}>Your Notes and Highlights</h1>
+            <Spacer marginBottom="6" />
+
+            <div className={styles['highlight-sort-actions']}>
+                        <Button title="All" hasIcon={true} iconName="done_all" onClick={() => { }} />
+                        <Button title="Favorites"  hasIcon={true} iconName="favorite" onClick={() => { }} />
+                        <Button title="Books"  hasIcon={true} iconName="book" onClick={() => { }} />
+                        <Button title="Web"  hasIcon={true} iconName="public" onClick={() => { }} />
+            </div>
+            <div className={styles['container']}>
+
+                {/* Highlight Actions */}
+                <div>
+
+
+                    {/* Highlights List */}
+                    <HighlightList />
+                </div>
             </div>
 
-            <div className={styles['highlights']}>
-                <h1 className={styles['notes-highlights-heading']}>Your Notes and Highlights</h1>
-                <Spacer marginBottom="6"/>
-                <div className="is-flex">
-                    <img src={books[0].cover} style={{height: 80, width:60}}/>
-                    <p className={styles['highlights-book-heading']}>{books[0].name}</p>
-                </div>
-                <div className={styles['book-highlights']}>
-                    <HighlightList/>
-                </div>
-
-            </div>
-        </div>
+        </>
     )
 }

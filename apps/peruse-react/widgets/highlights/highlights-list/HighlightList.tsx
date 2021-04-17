@@ -6,54 +6,68 @@ import styles from "./HighlightList.module.scss"
 
 const highlights = [
     {
-        color: HIGHLIGHT_COLOR.BLUE,
+        color: HIGHLIGHT_COLOR.GREEN,
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
-        note: 'Greetings',
+        note: 'NoSQL and SQL convergence overtime',
         date: 'Today',
-        location: 'Page 82'
+        location: 'Page 82',
+        name: "Design of Everyday Things",
+        cover: "code_complete.jpg",
     },
     {
-        color: HIGHLIGHT_COLOR.RED,
+        color: HIGHLIGHT_COLOR.ROSE,
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
         note: 'Greetings',
         date: 'Today',
-        location: 'Page 82'
+        location: 'Page 82',
+        name: "Design of Everyday Things",
+        cover: "code_complete.jpg",
     },
     {
         color: HIGHLIGHT_COLOR.YELLOW,
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
         note: 'Greetings',
         date: 'Today',
-        location: 'Page 82'
+        location: 'Page 82',
+        name: "Design of Everyday Things",
+        cover: "code_complete.jpg",
     },
     {
         color: HIGHLIGHT_COLOR.MAGENTA,
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
         note: 'Greetings',
         date: 'Today',
-        location: 'Page 82'
+        location: 'Page 82',
+        name: "Design of Everyday Things",
+        cover: "code_complete.jpg",
     },
     {
         color: HIGHLIGHT_COLOR.PURPLE,
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
         note: 'Greetings',
         date: 'Today',
-        location: 'Page 82'
+        location: 'Page 82',
+        name: "Design of Everyday Things",
+        cover: "code_complete.jpg",
     },
     {
         color: HIGHLIGHT_COLOR.ORANGE,
         text: 'Lorem ipsum , lorem ipsum important. Bievenue. Bonjour ca va',
         note: 'Greetings',
         date: 'Today',
-        location: 'Page 82'
+        location: 'Page 82',
+        name: "Design of Everyday Things",
+        cover: "code_complete.jpg",
     }
 ]
 export const HighlightList = () => {
     return (
         <div>
-            {highlights.map(({color, text,note,date,location}) => (
+            {highlights.map(({color, text,note,date, name, cover ,location}) => (
             <HighlightItem 
                 color={color} 
+                cover={cover}
+                name={name}
                 text={text} 
                 note={note} 
                 date={date} 

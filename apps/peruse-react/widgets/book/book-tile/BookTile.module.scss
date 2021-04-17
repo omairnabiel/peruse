@@ -18,9 +18,10 @@
 .title {
     font-size: 1rem;
     font-weight: 600;
-    font-family: sans-serif;
     text-align: left;
-    line-height: 16px; 
+    line-height: 18px; 
+    margin: 2px 0px 8px 0px;
+    text-overflow: ellipsis;
 }
 
 .tag {
@@ -37,7 +38,8 @@
 
 .legend {
     text-align: left;   
-    font-size: 0.8em;
-    color:#A9A9A9
+    font-size: 0.9em;
+    color:hsl(0, 0%, 40%);
+    padding-top: 4px;
 }
 

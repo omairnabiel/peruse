@@ -13,7 +13,7 @@ export const Button = ({title, onClick, hasIcon, iconName, children}:React.Props
     return (
         <button className={styles['button']} onClick={onClick}>
             {title}
-            {hasIcon && <div className={`${styles['button-icon']} fas fa-${iconName}`}/>}
+            {hasIcon && <div className={`material-icons-outlined ${styles['button-icon']}`}>{iconName}</div>}
         </button>
     )
 }

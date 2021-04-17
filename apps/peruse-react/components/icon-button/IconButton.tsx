@@ -9,6 +9,17 @@ interface Props {
      className?: string;
      onClickHandler: React.MouseEventHandler<HTMLElement>
 }
+
+/**
+ * `IconButton` uses material icons. For icon names refer to the following link 
+ * 
+ * @link {https://fonts.google.com/icons}
+ * @param {string} name
+ * @param {string} title
+ * @param {number} size
+ * @param {React.MouseEventHandler<HTMLElement>} onClickHandler
+ * @returns  {JSX.Element} 
+ */
 export const IconButton = ({name, title, size, onClickHandler}:Props) => {
     return (
         <span style={{cursor: 'pointer'}} className="icon-text" onClick={onClickHandler}>

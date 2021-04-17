@@ -14,7 +14,7 @@ export default function Home() {
     {
       label: "Highlights",
       value: "highlights"
-    }
+    },
   ]
 
   const bookSelectHandleChange = (value: string) => {
@@ -30,7 +30,7 @@ export default function Home() {
 
       <div className="is-flex is-justify-content-space-between">
         <Select label="Books" options={options} handleChange={bookSelectHandleChange} />
-        <Button title="Upload" onClick={() => { }} hasIcon={true} iconName="arrow-up"/>
+        <Button title="Upload" onClick={() => { }} hasIcon={true} iconName="file_upload"/>
       </div>
 
       {
