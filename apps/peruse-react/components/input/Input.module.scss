@@ -1,30 +1,30 @@
-@import "styles/colors.scss";
+@import 'styles/colors.scss';
 
 .container {
-    position: relative;
+  position: relative;
 }
 
 .icon {
-    position:absolute;
-    right: 0;
-    top: 28%;
-    margin-right: 15px;
-    font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 28%;
+  margin-right: 15px;
+  font-size: 1.5rem;
 }
 
 .input {
+  border: 1px solid $off-white;
+
+  &:focus {
+    outline: none !important;
     border: 1px solid $off-white;
+    box-shadow: none;
+  }
 
-    &:focus{
-        outline: none !important;  
-        border: 1px solid $off-white; 
-        box-shadow: none;
-    }
-
-    &:hover{
-        transition:  box-shadow 0.4s ease-in-out;
-        border: 1px solid  $off-white;
-        box-shadow: 0.5px 0.5px 2px 1px rgb(60 64 67 / 30%), -0.5px 0.5px 2px 1px rgb(60 64 67 / 10%);
-
-    }
+  &:hover {
+    transition: box-shadow 0.4s ease-in-out;
+    border: 1px solid $off-white;
+    box-shadow: 0.5px 0.5px 2px 1px rgb(60 64 67 / 30%),
+      -0.5px 0.5px 2px 1px rgb(60 64 67 / 10%);
+  }
 }

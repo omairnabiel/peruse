@@ -5,15 +5,18 @@ import styles from "./Button.module.scss"
 interface Props {
     title: string
     clasName?: string
-    hasIcon?: boolean
-    iconName?: string
+    hasIconRight?: boolean
+    hasIconLeft?: boolean
+    iconRightName?: string
+    iconLeftName?: string
     onClick: React.MouseEventHandler
 }
-export const Button = ({title, onClick, hasIcon, iconName, children}:React.PropsWithChildren<Props>) => {
+export const Button = ({ title, onClick, hasIconLeft, iconLeftName, hasIconRight, iconRightName, children }: React.PropsWithChildren<Props>) => {
     return (
         <button className={styles['button']} onClick={onClick}>
+            {hasIconLeft && <div className={`material-icons-outlined ${styles['button-icon']}`}>{iconLeftName}</div>}
             {title}
-            {hasIcon && <div className={`material-icons-outlined ${styles['button-icon']}`}>{iconName}</div>}
+            {hasIconRight && <div className={`material-icons-outlined ${styles['button-icon']}`}>{iconRightName}</div>}
         </button>
     )
 }

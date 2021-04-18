@@ -13,11 +13,12 @@ export default function SearchInput() {
     return (
         <div className={`${styles[`container`]} is-align-items-center`}>
             <Input
-                className={`${styles[`search-input`]}`}
-                value={search} handleChange={handleChange}
-                placeholder={"Search"} type={"text"}
-                size={"medium"}
-                iconName={"search"} />
+                value={search}
+                placeholder="Search anything"
+                type="text"
+                size="medium"
+                iconName="search"
+                handleChange={handleChange} />
         </div>
     )
 

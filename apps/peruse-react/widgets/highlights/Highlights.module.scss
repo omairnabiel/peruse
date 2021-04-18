@@ -1,31 +1,36 @@
-@import "styles/colors.scss";
+@import 'styles/colors.scss';
 
 .container {
   display: flex;
   overflow-y: scroll;
   margin-top: 10px;
-  height: calc(100vh - 40vh) !important; // -40 because of margin-top: 40px
+  height: calc(100vh - 20vh) !important;
+  padding-top: 10px;
   justify-items: center;
   justify-content: center;
 }
 
-.highlight-sort-actions {
-  display: flex;
-  justify-content: center;
+.highlight-sidebar {
+  flex: 1;
+  background-color: $beige-100;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
-  justify-items: flex-end;
-  padding: 8px 4px 8px 0px;
+  padding: 8px 4px 8px 4px;
   gap: 20px;
 }
 
-.notes-highlights-heading {
-  font-size: 22px;
-  font-weight: 500;
-  text-align: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid $light-gray;
+.highlight-sidebar-search {
+  font-size: 1rem !important;
+
+  &:hover {
+    box-shadow: none !important;
+  }
+}
+
+.highlight-list {
+  flex: 5;
+  padding: 0px 50px 0px 8px;
 }
 
 .book-tile-container {

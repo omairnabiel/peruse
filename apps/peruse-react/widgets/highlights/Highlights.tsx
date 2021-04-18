@@ -74,23 +74,13 @@ export const Highlights = () => {
     return (
         <>
 
-            {/* Highlight Heading */}
-            <Spacer marginTop="6" />
-            <h1 className={styles['notes-highlights-heading']}>Your Notes and Highlights</h1>
-            <Spacer marginBottom="6" />
-
-            <div className={styles['highlight-sort-actions']}>
-                        <Button title="All" hasIcon={true} iconName="done_all" onClick={() => { }} />
-                        <Button title="Favorites"  hasIcon={true} iconName="favorite" onClick={() => { }} />
-                        <Button title="Books"  hasIcon={true} iconName="book" onClick={() => { }} />
-                        <Button title="Web"  hasIcon={true} iconName="public" onClick={() => { }} />
-            </div>
             <div className={styles['container']}>
 
+                <div className={styles['highlight-sidebar']}>
+                </div>
+
                 {/* Highlight Actions */}
-                <div>
-
-
+                <div className={styles['highlight-list']}>
                     {/* Highlights List */}
                     <HighlightList />
                 </div>
