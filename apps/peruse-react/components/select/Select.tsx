@@ -49,6 +49,7 @@ export const Select = ({ label, options, handleChange, hasIconLeft, iconLeftName
                     options &&
                     options.map(option => (
                         <div key={option.value} className={`${styles['menu-item']}`} onClick={() => optionClickHandler(option)}>
+                            <div className="material-icons-outlined" style={{ fontSize: 16, fontWeight: 600 }}>{option.iconName}</div>
                             {option.label}
                         </div>)
                     )

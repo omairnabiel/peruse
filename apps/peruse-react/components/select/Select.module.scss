@@ -1,4 +1,4 @@
-@import "styles/colors.scss";
+@import 'styles/colors.scss';
 
 .container {
   position: relative;
@@ -11,34 +11,36 @@
 }
 
 .menu-button-icon {
-    padding: 0px 0px 0px 8px;
-    font-size: 12px;
+  padding: 0px 0px 0px 8px;
+  font-size: 12px;
 }
 
 .menu {
   position: absolute;
   top: 100%;
-  left: 3px;
+  left: 0px;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 4px;
   z-index: 2;
   border: 1px solid $off-white;
   padding: 4px 0px 4px 0px;
   margin-top: 4px;
   width: 200px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   display: none;
-
-
 }
 .menu-item {
-    height: 40px;
-    cursor: pointer;
-    padding: 8px 8px 8px 16px;
-    margin: 6px 0px 6px 0px;
-    color: $font-color-hover;
-    &:hover {
-        background-color: $hover-gray-100;
-    }
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 28px;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 8px 2px 8px;
+  margin: 6px 0px 6px 0px;
+  color: $font-color-hover;
+  &:hover {
+    background-color: $hover-gray-100;
+  }
 }
-

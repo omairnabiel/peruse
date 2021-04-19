@@ -14,7 +14,7 @@ export default function SearchInput() {
         <div className={`${styles[`container`]} is-align-items-center`}>
             <Input
                 value={search}
-                placeholder="Search anything"
+                placeholder="Quick Find"
                 type="text"
                 size="medium"
                 iconName="search"

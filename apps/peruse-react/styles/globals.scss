@@ -1,10 +1,9 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css";
-@import url("https://use.fontawesome.com/releases/v5.11.1/css/all.css");
-@import "styles/colors.scss";
+@import 'https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css';
+@import url('https://use.fontawesome.com/releases/v5.11.1/css/all.css');
+@import 'styles/colors.scss';
 
 // fonts
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:wght@100;300;400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
-
 
 html,
 body {
@@ -14,11 +13,10 @@ body {
   background-color: white;
   color: $font-color;
   font-size: 14px;
-  font-family:  -apple-system, BlinkMacSystemFont, Open Sans, Roboto,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 
   overflow: hidden;
-  scrollbar-color:#999 white ;
+  scrollbar-color: #999 white;
   scrollbar-width: none !important;
 }
 
@@ -46,13 +44,11 @@ a {
 /* width */
 ::-webkit-scrollbar {
   width: 4px;
-
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
-
 }
 
 /* Handle */
