@@ -13,10 +13,10 @@ interface Props {
 }
 export const Button = ({ title, onClick, hasIconLeft, iconLeftName, hasIconRight, iconRightName, children }: React.PropsWithChildren<Props>) => {
     return (
-        <button className={styles['button']} onClick={onClick}>
+        <div className={styles['button']} onClick={onClick}>
             {hasIconLeft && <div className={`material-icons-outlined ${styles['button-icon']}`}>{iconLeftName}</div>}
             {title}
             {hasIconRight && <div className={`material-icons-outlined ${styles['button-icon']}`}>{iconRightName}</div>}
-        </button>
+        </div>
     )
 }

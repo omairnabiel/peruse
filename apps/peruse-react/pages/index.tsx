@@ -7,18 +7,18 @@ import { Highlights } from "../widgets/highlights/Highlights"
 export default function Home() {
 
   const [selected, setSelected] = useState("books")
-  const [icon, setIcon] = useState("book")
+  const [icon, setIcon] = useState("bookmarks")
 
   const options: Option[] = [
     {
       label: "Books",
       value: "books",
-      iconName: "book"
+      iconName: "bookmarks"
     },
     {
       label: "Highlights",
       value: "highlights",
-      iconName: "text_snippet"
+      iconName: "sticky_note_2"
     },
   ]
 
@@ -38,7 +38,7 @@ export default function Home() {
       <div style={{ display: 'flex', paddingBottom: 4, borderBottom: `1px solid hsl(220, 9%, 87%)` }}>
         <Select label="Books" options={options} handleChange={bookSelectHandleChange} hasIconLeft={true} iconLeftName={icon} />
         <div style={{ flex: 5, justifyContent: 'flex-end' }} className="is-flex">
-          <Select label="Filter" options={options} handleChange={() => { }} hasIconLeft={true} iconLeftName="filter_list" />
+          <Select label="Filter" placement="right" options={options} handleChange={() => { }} hasIconLeft={true} iconLeftName="filter_list" />
         </div>
       </div>
       <Spacer marginBottom="2" />

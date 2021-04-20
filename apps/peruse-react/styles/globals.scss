@@ -11,9 +11,9 @@ body {
   margin: 0;
   margin-top: 10px;
   background-color: white;
-  color: $font-color;
+  color: $font-color !important;
   font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
 
   overflow: hidden;
   scrollbar-color: #999 white;
