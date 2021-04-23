@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  box-shadow: 0.5px 0.5px 2px 1px rgb(60 64 67 / 30%),
+    -0.5px 0.5px 2px 1px rgb(60 64 67 / 10%);
+  position: fixed;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: hsl(342, 80%, 98%) !important;
+  background-color: hsl(351, 79%, 66%) !important;
+
+  transition: transform 0.2s;
+  transform: scale(1);
+
+  &:hover {
+    transition: transform 0.2s;
+    transform: scale(1.08);
+  }
+}

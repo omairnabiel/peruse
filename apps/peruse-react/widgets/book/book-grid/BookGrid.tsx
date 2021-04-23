@@ -1,4 +1,5 @@
 import React from "react"
+import { FloatingButton } from "../../../components"
 import { BookTile } from "../book-tile/BookTile"
 
 import styles from "./BookGrid.module.scss"
@@ -64,7 +65,7 @@ export const BookGrid = () => {
         <div className={styles['book-grid']}>
             {
                 books.map(book => (
-                    <BookTile key={book.id} className={styles['book-tile-container']} name={book.name} cover={book.cover} highlights={book.highlights} category={book.category} progress={book.progress}/>
+                    <BookTile key={book.id} className={styles['book-tile-container']} name={book.name} cover={book.cover} highlights={book.highlights} category={book.category} progress={book.progress} />
                 ))
             }
         </div>
