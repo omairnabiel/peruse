@@ -1,8 +1,8 @@
-import React from "react"
-import { FloatingButton } from "../../../components"
-import { BookTile } from "../book-tile/BookTile"
+import React from "react";
+import { FloatingButton, Tooltip } from "../../../components";
+import { BookTile } from "../book-tile/BookTile";
 
-import styles from "./BookGrid.module.scss"
+import styles from "./BookGrid.module.scss";
 
 const books = [
     {
@@ -11,8 +11,8 @@ const books = [
         cover: "code_complete.jpg",
         highlights: 12,
         progress: 60,
-        category: 'Music',
-        lastRead: 'October 18, 2017'
+        category: "Music",
+        lastRead: "October 18, 2017",
     },
     {
         id: "2",
@@ -20,8 +20,8 @@ const books = [
         cover: "code_complete.jpg",
         highlights: 12,
         progress: 60,
-        category: 'Music',
-        lastRead: 'October 18, 2017'
+        category: "Music",
+        lastRead: "October 18, 2017",
     },
     {
         id: "3",
@@ -29,8 +29,8 @@ const books = [
         cover: "code_complete.jpg",
         highlights: 12,
         progress: 60,
-        category: 'Music',
-        lastRead: 'October 18, 2017'
+        category: "Music",
+        lastRead: "October 18, 2017",
     },
     {
         id: "4",
@@ -38,8 +38,8 @@ const books = [
         cover: "code_complete.jpg",
         highlights: 12,
         progress: 60,
-        category: 'Music',
-        lastRead: 'October 18, 2017'
+        category: "Music",
+        lastRead: "October 18, 2017",
     },
     {
         id: "5",
@@ -47,8 +47,8 @@ const books = [
         cover: "code_complete.jpg",
         highlights: 12,
         progress: 60,
-        category: 'Music',
-        lastRead: 'October 18, 2017'
+        category: "Music",
+        lastRead: "October 18, 2017",
     },
     {
         id: "6",
@@ -56,18 +56,24 @@ const books = [
         cover: "code_complete.jpg",
         highlights: 12,
         progress: 60,
-        category: 'Music',
-        lastRead: 'October 18, 2017'
-    }
-]
+        category: "Music",
+        lastRead: "October 18, 2017",
+    },
+];
 export const BookGrid = () => {
     return (
-        <div className={styles['book-grid']}>
-            {
-                books.map(book => (
-                    <BookTile key={book.id} className={styles['book-tile-container']} name={book.name} cover={book.cover} highlights={book.highlights} category={book.category} progress={book.progress} />
-                ))
-            }
+        <div className={styles["book-grid"]}>
+            {books.map((book) => (
+                <BookTile
+                    key={book.id}
+                    className={styles["book-tile-container"]}
+                    name={book.name}
+                    cover={book.cover}
+                    highlights={book.highlights}
+                    category={book.category}
+                    progress={book.progress}
+                />
+            ))}
         </div>
-    )
-}
+    );
+};

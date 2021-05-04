@@ -1,0 +1,40 @@
+@import "styles/colors.scss";
+
+.relative {
+    position: relative;
+
+    &:hover {
+        .tooltip {
+            display: block;
+        }
+    }
+}
+
+.tooltip {
+    position: absolute;
+    padding: 4px;
+    background-color: antiquewhite;
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+    display: none;
+}
+
+.right {
+    left: 100%;
+    margin-left: 4px;
+}
+
+.left {
+    right: 100%;
+    margin-right: 4px;
+}
+
+.top {
+    bottom: 100%;
+    margin-bottom: 4px;
+}
+
+.bottom {
+    top: 100%;
+    margin-top: 4px;
+}
