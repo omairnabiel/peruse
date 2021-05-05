@@ -6,35 +6,45 @@
     &:hover {
         .tooltip {
             display: block;
+            transition: ease-in 0.2s;
         }
     }
 }
 
 .tooltip {
-    position: absolute;
-    padding: 4px;
-    background-color: antiquewhite;
-    border: 1px solid $light-gray;
-    border-radius: 3px;
     display: none;
+    z-index: 1;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    position: absolute;
+    padding: 2px 6px 2px 6px;
+    letter-spacing: 0.5px;
+    background-color: hsl(217, 19%, 22%);
+    border: 1px solid hsl(217, 19%, 22%);
+    border-radius: 4px;
+    box-shadow: rgb(15 15 15 / 5%) 0px 0px 0px 1px,
+        rgb(15 15 15 / 10%) 0px 3px 6px;
 }
 
 .right {
     left: 100%;
-    margin-left: 4px;
+    margin-left: 2px;
 }
 
 .left {
     right: 100%;
-    margin-right: 4px;
+    margin-right: 2px;
 }
 
 .top {
     bottom: 100%;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
+    margin-left: -50%;
 }
 
 .bottom {
     top: 100%;
-    margin-top: 4px;
+    margin-top: 2px;
+    margin-left: -50%;
 }
