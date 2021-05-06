@@ -42,12 +42,13 @@ export const HighlightItem = ({
                     {/* Highlight Actions */}
                     <div className={`is-flex ${styles.actions}`}>
                         {/* Mark favorite button  */}
-                        <IconButton
-                            name="favorite_border"
-                            size={1.5}
-                            onClickHandler={() => {}}
-                        />
-
+                        <Tooltip title="Favourite" position="bottom">
+                            <IconButton
+                                name="favorite_border"
+                                size={1.5}
+                                onClickHandler={() => {}}
+                            />
+                        </Tooltip>
                         {/* Spacing */}
                         <Spacer marginLeft="1" marginRight="1" />
 
