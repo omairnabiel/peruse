@@ -10,3 +10,4 @@ export * from "./spacer/Spacer";
 export * from "./icon/Icon";
 export * from "./floating-button/FloatingButton";
 export * from "./tooltip/Tooltip";
+export * from "./modal/Modal";

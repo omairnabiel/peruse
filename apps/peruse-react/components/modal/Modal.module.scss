@@ -6,14 +6,20 @@
     right: 0;
     background: rgba(0, 0, 0, 0.7);
     transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
+    opacity: 0.3;
+    z-index: 2;
 }
 
-.none {
+.hidden {
     display: none !important;
 }
 
 .visible {
     display: flex !important;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
 }
