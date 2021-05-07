@@ -52,11 +52,6 @@ export default function Home() {
                 <FloatingButton bottom="30" right="30" iconName="file_upload" />
 
                 <Navbar />
-                <Modal
-                    isOpen={showModal}
-                    onClose={() => setShowModal(!showModal)}
-                    size="lg"
-                />
                 <Spacer marginTop="6" marginBottom="6" />
 
                 {/* Filter Buttons Bar */}
