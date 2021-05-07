@@ -17,7 +17,7 @@ interface Props {
  * The content body of modal is passed as a child prop
  * @param {string}                  title
  * @param {boolean}                 isOpen
- * @param {("sm" | "md" | "lg")}    size
+ * @param {("xs" | "sm" | "md" | "lg")}    size
  * @param {function}                onCLose
  */
 export const Modal = ({
@@ -29,7 +29,7 @@ export const Modal = ({
 }: PropsWithChildren<Props>) => {
     const visibility = isOpen ? "visible" : "hidden";
     return (
-        /** Modal Overlay to blur the background of modal and also to close modal on when clicked outside */
+        /** Modal Overlay to blur the background of modal and also to close modal when clicked outside */
         <div
             onClick={() => onClose()}
             className={`${styles.overlay} ${styles[visibility]}`}
