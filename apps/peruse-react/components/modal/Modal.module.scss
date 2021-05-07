@@ -4,9 +4,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
     transition: opacity 500ms;
-    opacity: 0.3;
+    opacity: 1;
     z-index: 2;
 }
 
@@ -22,4 +24,22 @@
     display: flex;
     justify-content: space-between;
     padding: 3px;
+}
+
+.xs {
+    width: 40%;
+    height: 25%;
+}
+
+.sm {
+    width: 50%;
+    height: 50%;
+}
+.md {
+    width: 65%;
+    height: 60%;
+}
+.lg {
+    width: 75%;
+    height: 75%;
 }
