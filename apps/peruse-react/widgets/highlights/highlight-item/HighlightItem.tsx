@@ -30,7 +30,11 @@ export const HighlightItem = ({
                 <div className={styles["title-bar"]}>
                     {/*  Highlight Book Heading */}
                     <div className="is-flex">
-                        <img src={cover} style={{ height: 42, width: 32 }} />
+                        <img
+                            src={cover}
+                            className={styles["image"]}
+                            style={{ height: 42, width: 32 }}
+                        />
                         <div className={styles["book-info"]}>
                             <p className={styles["book-title"]}>{name}</p>
                             <p className={styles["highlight-info"]}>

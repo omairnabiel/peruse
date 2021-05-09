@@ -15,10 +15,10 @@ interface Props {
 /**
  * Modal provides the bare-bone functionality such as onClose function, close on outside click and basic styling.
  * The content body of modal is passed as a child prop
- * @param {string}                  title
- * @param {boolean}                 isOpen
- * @param {("xs" | "sm" | "md" | "lg")}    size
- * @param {function}                onCLose
+ * @param {string}                          title
+ * @param {boolean}                         isOpen
+ * @param {("xs" | "sm" | "md" | "lg")}     size
+ * @param {function}                        onCLose
  */
 export const Modal = ({
     title,
@@ -47,7 +47,7 @@ export const Modal = ({
                     </div>
 
                     {/* Content */}
-                    {/* {children} */}
+                    {children}
                 </Card>
             </div>
         </div>

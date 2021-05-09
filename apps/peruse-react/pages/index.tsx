@@ -19,7 +19,7 @@ export default function Home() {
         {
             label: "Highlights",
             value: "highlights",
-            iconName: "sticky_note_2",
+            iconName: "format_color_text",
         },
     ];
 
@@ -32,12 +32,12 @@ export default function Home() {
         {
             label: "Last Read",
             value: "last_read",
-            iconName: "auto_stories",
+            iconName: "bookmark_border",
         },
         {
             label: "Most Highlighted",
             value: "most_highlighted",
-            iconName: "try",
+            iconName: "trending_up",
         },
     ];
 
@@ -49,8 +49,6 @@ export default function Home() {
     return (
         <>
             <div className="container">
-                <FloatingButton bottom="30" right="30" iconName="file_upload" />
-
                 <Navbar />
                 <Spacer marginTop="6" marginBottom="6" />
 
@@ -67,8 +65,7 @@ export default function Home() {
                         label="Books"
                         options={options}
                         handleChange={bookSelectHandleChange}
-                        hasIconLeft={true}
-                        iconLeftName={icon}
+                        iconLeft={icon}
                     />
                     <div
                         style={{ flex: 5, justifyContent: "flex-end" }}
@@ -79,8 +76,7 @@ export default function Home() {
                             placement="right"
                             options={sortOptions}
                             handleChange={() => {}}
-                            hasIconLeft={true}
-                            iconLeftName="sort"
+                            iconLeft="sort"
                         />
                     </div>
                 </div>

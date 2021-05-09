@@ -1,63 +1,71 @@
-@import 'styles/colors.scss';
+@import "styles/colors.scss";
 
 .container {
-  display: flex;
-  padding: 8px 4px 8px 0 px;
-  margin: 0px 0px 16px 0px;
+    display: flex;
+    padding: 8px 4px 8px 0 px;
+    margin: 0px 0px 16px 0px;
 }
 
 .highlight-content {
-  flex: 1;
-  padding: 10px;
-  border-top: 1px solid $light-gray;
-  border-bottom: 1px solid $light-gray;
-  border-right: 1px solid $light-gray;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+    flex: 1;
+    padding: 10px;
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+    border-right: 1px solid $light-gray;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .title-bar {
-  display: flex;
-  flex: 2;
-  align-items: center;
-  margin: 0px 0px 6px 0px;
+    display: flex;
+    flex: 2;
+    align-items: center;
+    margin: 0px 0px 6px 0px;
+}
+
+.image {
+    /** Fix image aliasing when sized down*/
+    -webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
 }
 
 .actions {
-  flex: 1;
-  justify-content: flex-end;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .highlight-text {
-  font-size: 1.08em;
-  width: 85ch;
-  margin: 0px 0px 8px 0px;
-  padding-left: 42px;
-  font-family: Roboto;
+    font-size: 1.08em;
+    width: 85ch;
+    margin: 0px 0px 8px 0px;
+    padding-left: 42px;
+    font-family: Roboto;
 }
 
 .highlight-note {
-  display: flex;
-  align-items: center;
-  font-style: italic;
-  gap: 8px;
-  color: $gray;
-  padding-left: 42px;
-  width: 85ch;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    gap: 8px;
+    color: $gray;
+    padding-left: 42px;
+    width: 85ch;
 }
 
 .book-info {
-  padding-left: 10px;
+    padding-left: 10px;
 }
 
 .book-title {
-  font-weight: 600;
-  font-size: 12px;
-  margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 4px;
 }
 
 .highlight-info {
-  font-size: 0.9em;
-  font-style: italic;
-  font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.9em;
+    font-style: italic;
+    font-family: "Source Sans Pro", sans-serif;
 }

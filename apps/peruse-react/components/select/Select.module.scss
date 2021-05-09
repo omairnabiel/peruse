@@ -1,54 +1,54 @@
-@import 'styles/colors.scss';
+@import "styles/colors.scss";
 
 .container {
-  position: relative;
+    position: relative;
 }
 
 .menu-button {
-  outline: none;
-  cursor: pointer;
-  align-items: center;
+    outline: none;
+    cursor: pointer;
+    align-items: center;
 }
 
 .menu-button-icon {
-  padding: 0px 0px 0px 8px;
-  font-size: 12px;
+    padding: 0px 0px 0px 8px;
+    font-size: 12px;
 }
 
 .menu {
-  position: absolute;
-  top: 100%;
-  background-color: white;
-  border-radius: 3px;
-  z-index: 2;
-  border: 1px solid $off-white;
-  padding: 4px 0px 4px 0px;
-  margin-top: 4px;
-  min-width: 200px;
-  box-shadow: rgb(15 15 15 / 5%) 0px 0px 0px 1px,
-    rgb(15 15 15 / 10%) 0px 3px 6px, rgb(15 15 15 / 20%) 0px 9px 24px;
-  display: none;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    border-radius: 3px;
+    z-index: 2;
+    border: 1px solid $off-white;
+    padding: 4px 0px 4px 0px;
+    margin-top: 4px;
+    min-width: 200px;
+    box-shadow: rgb(15 15 15 / 5%) 0px 0px 0px 1px,
+        rgb(15 15 15 / 10%) 0px 3px 6px, rgb(15 15 15 / 20%) 0px 9px 24px;
+    display: none;
 }
 
 .menu-item {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  min-height: 28px;
-  font-size: 14px;
-  cursor: pointer;
-  padding: 2px 8px 2px 8px;
-  margin-top: 2px;
-  &:hover {
-    transition: ease-in 0.1s;
-    background-color: $hover-gray-200;
-  }
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    min-height: 28px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 2px 8px 2px 8px;
+    margin-top: 2px;
+    &:hover {
+        transition: ease-in 0.1s;
+        background-color: $hover-gray-200;
+    }
 }
 
 .right {
-  right: 0px;
+    right: 0px;
 }
 
 .left {
-  left: 0px;
+    left: 0px;
 }
