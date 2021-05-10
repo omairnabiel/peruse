@@ -71,7 +71,13 @@ export const HighlightItem = ({
                 {/* Highlight Note */}
                 {note && (
                     <div className={styles["highlight-note"]}>
-                        <Icon name="description" size={1.2} type="outlined" />
+                        <div>
+                            <Icon
+                                name="description"
+                                size={1.2}
+                                type="outlined"
+                            />
+                        </div>
                         <div>{note}</div>
                     </div>
                 )}

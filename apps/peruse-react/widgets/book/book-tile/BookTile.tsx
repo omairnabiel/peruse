@@ -54,18 +54,24 @@ export const BookTile = ({
                                 type="outlined"
                                 size={1}
                             />
-                            Highlights {highlights}
+                            <div className={styles["read-info-text"]}>
+                                Highlights
+                            </div>
+                            <div>{highlights}</div>
                         </div>
                     )}
                     {/* Book progress */}
                     {progress && (
                         <div className={styles["read-info"]}>
                             <Icon
-                                name="hourglass_empty"
+                                name="import_contacts"
                                 type="outlined"
                                 size={1}
                             />
-                            Progress {progress}%
+                            <div className={styles["read-info-text"]}>
+                                Progress
+                            </div>
+                            <div>{progress}%</div>
                         </div>
                     )}
                     {/* Last read date */}

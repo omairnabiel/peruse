@@ -83,11 +83,16 @@
 
 .read-info {
     display: flex;
+    width: 50%;
     align-items: center;
     gap: 4px;
-    padding: 8px 0px 6px 0px;
+    margin: 8px 0px 6px 0px;
     font-size: 13px;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 500;
-    color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 40%);
+}
+
+.read-info-text {
+    min-width: 40px;
 }
