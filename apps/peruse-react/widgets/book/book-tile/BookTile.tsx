@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "../../../components";
+import { ProgressBar } from "../../../components/progress-bar/ProgressBar";
 
 import styles from "./BookTile.module.scss";
 interface Props {
@@ -9,6 +10,8 @@ interface Props {
     category?: string;
     progress?: number;
     lastRead?: string;
+    onPage: number;
+    totalPages: number;
     className?: string;
 }
 
@@ -16,7 +19,8 @@ export const BookTile = ({
     cover,
     name,
     highlights,
-    progress,
+    onPage,
+    totalPages,
     lastRead,
     category,
     className,
@@ -46,40 +50,29 @@ export const BookTile = ({
                         </div>
                     </div>
                     <div className={styles["divider"]} />
+                    {/* TODO: Add a single div wrapping highlights and progress to improve CSS */}
                     {/* Number of highlights */}
-                    {highlights && (
-                        <div className={styles["read-info"]}>
-                            <Icon
-                                name="format_color_text"
-                                type="outlined"
-                                size={1}
-                            />
-                            <div className={styles["read-info-text"]}>
-                                Highlights
-                            </div>
-                            <div>{highlights}</div>
-                        </div>
-                    )}
+                    <div className={styles["highlights"]}>
+                        <Icon
+                            name="format_color_text"
+                            type="outlined"
+                            size={0.89}
+                        />
+
+                        <div>Highlights</div>
+                        <div>{highlights}</div>
+                    </div>
+
                     {/* Book progress */}
-                    {progress && (
-                        <div className={styles["read-info"]}>
-                            <Icon
-                                name="import_contacts"
-                                type="outlined"
-                                size={1}
-                            />
-                            <div className={styles["read-info-text"]}>
-                                Progress
-                            </div>
-                            <div>{progress}%</div>
-                        </div>
-                    )}
-                    {/* Last read date */}
-                    {/* {lastRead && (
-                        <div className={styles["legend"]}>
-                            Last read on {lastRead}%
-                        </div>
-                    )} */}
+                    <div className={styles["progress"]}>
+                        <ProgressBar
+                            labelLeft={`${Math.floor(
+                                (onPage / totalPages) * 100
+                            )}% Complete`}
+                            labelRight={`${onPage}/${totalPages} pages`}
+                            progress={60}
+                        />
+                    </div>
                 </div>
                 {children}
             </div>

@@ -13,6 +13,8 @@ const books = [
         progress: 60,
         category: "Tech",
         lastRead: "October 18, 2017",
+        onPage: 212,
+        totalPages: 600,
     },
     {
         id: "2",
@@ -22,6 +24,8 @@ const books = [
         progress: 60,
         category: "Tech",
         lastRead: "October 18, 2017",
+        onPage: 212,
+        totalPages: 600,
     },
     {
         id: "3",
@@ -31,6 +35,8 @@ const books = [
         progress: 60,
         category: "Design",
         lastRead: "October 18, 2017",
+        onPage: 212,
+        totalPages: 600,
     },
     {
         id: "4",
@@ -40,6 +46,8 @@ const books = [
         progress: 60,
         category: "Design",
         lastRead: "October 18, 2017",
+        onPage: 212,
+        totalPages: 600,
     },
     {
         id: "5",
@@ -49,6 +57,8 @@ const books = [
         progress: 60,
         category: "Fiction",
         lastRead: "October 18, 2017",
+        onPage: 212,
+        totalPages: 600,
     },
     {
         id: "6",
@@ -58,6 +68,8 @@ const books = [
         progress: 60,
         category: "Autobiography",
         lastRead: "October 18, 2017",
+        onPage: 212,
+        totalPages: 600,
     },
 ];
 export const BookGrid = () => {
@@ -71,7 +83,8 @@ export const BookGrid = () => {
                     cover={book.cover}
                     highlights={book.highlights}
                     category={book.category}
-                    progress={book.progress}
+                    onPage={book.onPage}
+                    totalPages={book.totalPages}
                 />
             ))}
         </div>
