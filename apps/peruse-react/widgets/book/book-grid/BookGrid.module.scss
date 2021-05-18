@@ -1,7 +1,9 @@
 @import "styles/colors.scss";
 
 .book-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: min-content;
     flex-wrap: wrap;
     margin-top: 40px;
     padding: 5px;
@@ -9,6 +11,8 @@
     padding: 10px 0px 10px 0px;
     gap: 30px;
     position: relative;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 .book-tile-container {

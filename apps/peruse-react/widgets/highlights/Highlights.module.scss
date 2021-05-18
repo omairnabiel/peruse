@@ -1,44 +1,35 @@
-@import 'styles/colors.scss';
+@import "styles/colors.scss";
 
 .container {
-  display: flex;
-  overflow-y: scroll;
-  margin-top: 10px;
-  height: calc(100vh - 20vh) !important;
-  padding-top: 10px;
-  justify-items: center;
-  justify-content: center;
+    height: calc(100vh - 25vh);
+    overflow-y: scroll;
 }
 
-.highlight-sidebar {
-  flex: 1;
-  background-color: hsl(45, 8%, 97%);
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  padding: 8px 4px 8px 4px;
-  gap: 20px;
+.highlights-container {
+    column-count: 3;
+    column-gap: 10px;
 }
 
-.highlight-sidebar-search {
-  font-size: 1rem !important;
-
-  &:hover {
-    box-shadow: none !important;
-  }
+.highlight {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
 }
 
-.highlight-list {
-  flex: 5;
-  padding: 0px 50px 0px 8px;
-}
+@supports (grid-template-rows: masonry) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-rows: masonry;
+        height: calc(100vh - 20vh) !important;
+        padding: 10px;
+        margin-top: 10px;
+        overflow-y: scroll;
+    }
 
-.book-tile-container {
-  width: 310px;
-  height: 180px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $off-white;
-  }
+    .highlight {
+        margin: 0;
+    }
 }

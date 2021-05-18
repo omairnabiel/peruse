@@ -22,19 +22,22 @@ export const HighlightItem = ({
     location,
 }: React.PropsWithChildren<Props>) => {
     return (
-        <div className={styles.container}>
-            {/* Highlight Color Bar */}
-            <div style={{ border: `2px solid ${color}`, borderRadius: 12 }} />
+        <div
+            className={styles.container}
+            style={{ borderLeft: `6px solid ${color}` }}
+        >
+            <div>
+                <img
+                    src={cover}
+                    className={styles["image"]}
+                    style={{ height: 42, width: 32 }}
+                />
+            </div>
 
             <div className={styles["highlight-content"]}>
                 <div className={styles["title-bar"]}>
                     {/*  Highlight Book Heading */}
                     <div className="is-flex">
-                        <img
-                            src={cover}
-                            className={styles["image"]}
-                            style={{ height: 42, width: 32 }}
-                        />
                         <div className={styles["book-info"]}>
                             <p className={styles["book-title"]}>{name}</p>
                             <p className={styles["highlight-info"]}>
@@ -46,13 +49,12 @@ export const HighlightItem = ({
                     {/* Highlight Actions */}
                     <div className={`is-flex ${styles.actions}`}>
                         {/* Mark favorite button  */}
-                        <Tooltip title="Favourite" position="bottom">
-                            <IconButton
-                                name="favorite_border"
-                                size={1.5}
-                                onClickHandler={() => {}}
-                            />
-                        </Tooltip>
+
+                        <IconButton
+                            name="favorite_border"
+                            size={1.5}
+                            onClickHandler={() => {}}
+                        />
                         {/* Spacing */}
                         <Spacer marginLeft="1" marginRight="1" />
 
@@ -71,13 +73,8 @@ export const HighlightItem = ({
                 {/* Highlight Note */}
                 {note && (
                     <div className={styles["highlight-note"]}>
-                        <div>
-                            <Icon
-                                name="description"
-                                size={1.2}
-                                type="outlined"
-                            />
-                        </div>
+                        <Icon name="description" size={1.1} type="outlined" />
+
                         <div>{note}</div>
                     </div>
                 )}
