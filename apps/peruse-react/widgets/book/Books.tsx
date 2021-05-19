@@ -1,8 +1,7 @@
 import React from "react";
-import { FloatingButton, Tooltip } from "../../../components";
-import { BookTile } from "../book-tile/BookTile";
+import { BookTile } from "./book-tile/BookTile";
 
-import styles from "./BookGrid.module.scss";
+import styles from "./Books.module.scss";
 
 const books = [
     {
@@ -72,7 +71,7 @@ const books = [
         totalPages: 600,
     },
 ];
-export const BookGrid = () => {
+export const Books = () => {
     return (
         <div className={styles["book-grid"]}>
             {books.map((book) => (

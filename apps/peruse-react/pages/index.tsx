@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Button, Icon, IconButton, Modal, Select, Spacer } from "../components";
-import { Navbar, BookGrid } from "../widgets";
+import { Select, Spacer } from "../components";
+import { Navbar, Books } from "../widgets";
 import { Option } from "../common/types";
 import { Highlights } from "../widgets/highlights/Highlights";
-import { FloatingButton } from "../components/floating-button/FloatingButton";
 
 export default function Home() {
     const [selected, setSelected] = useState("books");
@@ -82,7 +81,7 @@ export default function Home() {
                 </div>
                 <Spacer marginBottom="2" />
 
-                {selected === "books" ? <BookGrid /> : <Highlights />}
+                {selected === "books" ? <Books /> : <Highlights />}
             </div>
         </>
     );

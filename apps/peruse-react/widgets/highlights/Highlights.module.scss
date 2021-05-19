@@ -19,7 +19,7 @@
 }
 
 @supports (grid-template-rows: masonry) {
-    .container {
+    .highlights-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         grid-template-rows: masonry;
