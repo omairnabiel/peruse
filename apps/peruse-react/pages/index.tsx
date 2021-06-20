@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Select, Spacer } from "../components";
-import { Navbar, Books } from "../widgets";
-import { Option } from "../common/types";
+import { Navbar, Books } from "../widgets/";
+import { Option } from "../types";
 import { Highlights } from "../widgets/highlights/Highlights";
 
 export default function Home() {

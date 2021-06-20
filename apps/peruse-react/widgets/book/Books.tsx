@@ -1,5 +1,5 @@
 import React from "react";
-import { BookTile } from "./book-tile/BookTile";
+import { BookTile } from "../book-tile/BookTile";
 
 import styles from "./Books.module.scss";
 

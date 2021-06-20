@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HIGHLIGHT_COLOR } from "../../constants/highlight_colors";
-import { HighlightItem } from "./highlight-item/HighlightItem";
+import { HighlightItem } from "../highlight-item";
 
 import styles from "./Highlights.module.scss";
 

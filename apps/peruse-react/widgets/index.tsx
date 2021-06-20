@@ -1,3 +1,5 @@
 export * from "./book"
+export * from "./book-tile"
 export * from "./navbar"
+export * from "./highlight-item"
 export * from "./highlights"

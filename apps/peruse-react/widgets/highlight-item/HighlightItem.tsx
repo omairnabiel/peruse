@@ -1,4 +1,4 @@
-import { Icon, IconButton, Spacer, Tooltip } from "../../../components";
+import { Icon, IconButton, Spacer } from "../../components";
 
 import styles from "./HighlightItem.module.scss";
 
