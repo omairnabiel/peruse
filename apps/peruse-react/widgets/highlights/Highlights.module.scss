@@ -1,35 +1,36 @@
-@import "styles/colors.scss";
+@import 'styles/colors.scss';
 
 .container {
-    height: calc(100vh - 25vh);
-    overflow-y: scroll;
+	height: calc(100vh - 25vh);
+	overflow-y: scroll;
 }
 
 .highlights-container {
-    column-count: 3;
-    column-gap: 10px;
+	column-count: 3;
+	column-gap: 10px;
+	padding: 5px;
 }
 
 .highlight {
-    margin: 0;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    margin-bottom: 10px;
-    break-inside: avoid;
+	margin: 0;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	margin-bottom: 10px;
+	break-inside: avoid;
 }
 
 @supports (grid-template-rows: masonry) {
-    .highlights-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        grid-template-rows: masonry;
-        height: calc(100vh - 20vh) !important;
-        padding: 10px;
-        margin-top: 10px;
-        overflow-y: scroll;
-    }
+	.highlights-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		grid-template-rows: masonry;
+		height: calc(100vh - 20vh) !important;
+		padding: 10px;
+		margin-top: 10px;
+		overflow-y: scroll;
+	}
 
-    .highlight {
-        margin: 0;
-    }
+	.highlight {
+		margin: 0;
+	}
 }

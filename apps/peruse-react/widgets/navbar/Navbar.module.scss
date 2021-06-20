@@ -1,5 +1,11 @@
-@import "styles/colors.scss";
+@import 'styles/colors.scss';
 
 .search {
-  border-radius: 5px;
+	border-bottom: 1px solid $light-gray;
+	padding: 0px 8px 8px 6px;
+
+	&:focus {
+		border-bottom: 1px solid;
+		outline: none;
+	}
 }

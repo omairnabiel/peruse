@@ -5,7 +5,7 @@ import {IconButton, Input, Logo} from '../../components'
 import styles from './Navbar.module.scss'
 
 export const Navbar = () => {
-	const actionButtons = [
+	const navButtons = [
 		{
 			name: 'notifications',
 			onClickHandler: () => {},
@@ -29,19 +29,17 @@ export const Navbar = () => {
 			<Logo />
 
 			{/* Navbar Search */}
-			<div className="w-full align-center">
-				<input
-					value={search}
-					placeholder="Quick Search your Books and Highlights"
-					type="text"
-					onChange={handleChange}
-					className="text-lg w-4/5"
-				/>
-			</div>
+			<input
+				value={search}
+				placeholder="Quick Search your Books and Highlights"
+				type="text"
+				onChange={handleChange}
+				className={`text-lg w-3/5 ${styles.search}`}
+			/>
 
-			{/* Action Buttons */}
+			{/* Navbar Buttons */}
 			<div>
-				{actionButtons.map(button => {
+				{navButtons.map(button => {
 					return (
 						<span key={button.name} className="ml-3">
 							<IconButton
