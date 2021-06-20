@@ -1,8 +1,26 @@
+@import 'styles/colors.scss';
+
 .sidebar {
+	padding: 5px;
 	margin: 0;
-	padding: 0;
-	position: fixed;
-	width: 320px;
-	height: 100%;
-	overflow: auto;
+	padding: 5px 2px 6px 0px;
+	width: 300px;
+	height: calc(100vh - 25vh);
+	overflow-y: scroll;
+}
+
+.sidebar-book {
+	flex: 1;
+	padding: 2px;
+}
+
+.image {
+	/** Fix image aliasing when sized down*/
+	display: flex;
+	width: 130px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-ms-transform: translateZ(0); /* IE 9 */
+	-webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+	transform: translateZ(0);
 }

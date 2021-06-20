@@ -1,13 +1,8 @@
 @import 'styles/colors.scss';
 
 .container {
-	height: calc(100vh - 25vh);
+	height: calc(100vh - 20vh);
 	overflow-y: scroll;
-}
-
-.highlights-container {
-	column-count: 3;
-	column-gap: 10px;
 	padding: 5px;
 }
 
@@ -17,20 +12,4 @@
 	grid-template-rows: 1fr auto;
 	margin-bottom: 10px;
 	break-inside: avoid;
-}
-
-@supports (grid-template-rows: masonry) {
-	.highlights-container {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-		grid-template-rows: masonry;
-		height: calc(100vh - 20vh) !important;
-		padding: 10px;
-		margin-top: 10px;
-		overflow-y: scroll;
-	}
-
-	.highlight {
-		margin: 0;
-	}
 }
