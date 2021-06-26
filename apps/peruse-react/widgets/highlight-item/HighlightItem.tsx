@@ -15,16 +15,16 @@ interface Props {
 export const HighlightItem = ({color, text, note, cover, name, date, location}: React.PropsWithChildren<Props>) => {
 	return (
 		<div className={styles.container} style={{borderLeft: `6px solid ${color}`}}>
-			<div>
+			{/* <div>
 				<img src={cover} className={styles['image']} style={{height: 42, width: 32}} />
-			</div>
+			</div> */}
 
 			<div className={styles['highlight-content']}>
 				{/* Highlight Title */}
 				<div className={styles['title-bar']}>
 					<div className="flex">
 						<div className={styles['book-info']}>
-							<p className={styles['book-title']}>{name}</p>
+							{/* <p className={styles['book-title']}>{name}</p> */}
 							<p className={styles['highlight-info']}>
 								{location} - {date}
 							</p>
@@ -32,7 +32,7 @@ export const HighlightItem = ({color, text, note, cover, name, date, location}: 
 					</div>
 
 					{/* Highlight Actions */}
-					<div className={`flex ${styles.actions}`}>
+					<div className={`flex flex-1 items-end ${styles.actions}`}>
 						<IconButton name="favorite_border" size={1.5} onClickHandler={() => {}} />
 						<Spacer marginLeft="1" marginRight="1" />
 						<IconButton name="delete" size={1.5} onClickHandler={() => {}} />
