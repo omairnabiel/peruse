@@ -26,6 +26,7 @@ const colors = {
 	'blue-700': '#0062a4',
 	'yellow-400': '#FAD878',
 	'yellow-500': '#FECE2F',
+	'pink-500': '#eb566c',
 }
 
 // shorthand notation aliases
@@ -33,6 +34,7 @@ colors.red = colors['red-500']
 colors.green = colors['green-500']
 colors.blue = colors['blue-500']
 colors.yellow = colors['yellow-500']
+colors.pink = colors['pink-500']
 
 // functional name aliases
 colors.error = colors['red-500']

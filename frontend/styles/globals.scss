@@ -1,54 +1,88 @@
-/* Tailwind imports */
-@tailwind utilities;
-@tailwind base;
-
-@import "styles/colors.scss";
-@import "styles/icons.scss";
+@import 'styles/colors.scss';
+@import 'styles/icons.scss';
 
 // fonts
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:wght@100;300;400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:wght@100;300;400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  margin-top: 10px;
-  background-color: white;
-  color: $font-color !important;
-  font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+	padding: 0;
+	margin: 0;
+	margin-top: 10px;
+	background-color: white;
+	color: $font-color !important;
+	font-size: 14px;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
 
-  overflow: hidden;
-  scrollbar-color: #999 white;
-  scrollbar-width: none !important;
+	scrollbar-color: #999 white;
+	scrollbar-width: none !important;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 4px;
+	width: 4px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
+	background: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #999;
-  border-radius: 10px;
+	background: #999;
+	border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #888;
+	background: #888;
+}
+
+.button,
+.button-pink {
+	display: flex;
+	font-weight: 600;
+	border-radius: 4px;
+	padding: 2px 6px 2px 6px;
+	font-size: 15px;
+	border: none;
+	cursor: pointer;
+	color: $font-color;
+	align-items: center;
+	min-width: 70px;
+	justify-content: center;
+	gap: 4px;
+	&:hover {
+		transition: ease-in 0.15s;
+		background-color: $hover-gray-200;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.button-icon {
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.button-pink {
+	background-color: $pink;
+	color: white !important;
+	font-weight: 300 !important;
+	&:hover {
+		transition: ease-in 0.15s;
+		background-color: darken($color: $pink, $amount: 10%) !important;
+	}
 }

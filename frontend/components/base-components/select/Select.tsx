@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect, CSSProperties} from 'react'
-import {Button} from '../index'
-import {Option} from '../../types'
+import {Button} from 'components'
+import {Option} from 'types'
 import styles from './Select.module.scss'
 
 interface Props {

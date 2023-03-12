@@ -1,7 +1,13 @@
 const colors = require('./colors')
 
 module.exports = {
-	content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+	purge: {
+		content: [
+			'./pages/**/*.{js,ts,jsx,tsx}',
+			'./components/**/*.{js,ts,jsx,tsx}',
+			'./widgets/**/*.{js,ts,jsx,tsx}',
+		],
+	},
 	theme: {
 		colors,
 		spacing: {

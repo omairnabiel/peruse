@@ -1,6 +1,6 @@
 import React from 'react'
 import {Icon} from '../../components'
-import {ProgressBar} from '../../components/progress-bar/ProgressBar'
+import {ProgressBar} from 'components'
 
 import styles from './BookTile.module.scss'
 interface Props {

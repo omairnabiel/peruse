@@ -1,21 +1,24 @@
-import "tailwindcss/tailwind.css";
-import "../styles/globals.scss";
+import 'tailwindcss/tailwind.css'
+import '../styles/globals.scss'
 
-import { AppProps } from "next/app";
-import Head from "next/head";
+import Head from 'next/head'
+import {RecoilRoot} from 'recoil'
+import {AppProps} from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-          rel="stylesheet"
-        />
-      </Head>
-      <Component {...pageProps} />
-    </>
-  );
+import {Modal} from 'components'
+
+function MyApp({Component, pageProps}: AppProps) {
+	return (
+		<>
+			<Head>
+				<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+			</Head>
+			<RecoilRoot>
+				<Component {...pageProps} />
+				<Modal />
+			</RecoilRoot>
+		</>
+	)
 }
 
-export default MyApp;
+export default MyApp

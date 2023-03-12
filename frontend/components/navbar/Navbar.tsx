@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import {IconButton, Input, Logo} from '../../components'
+import {IconButton, Input, Logo} from '..'
 
 import styles from './Navbar.module.scss'
 
@@ -26,7 +26,9 @@ export const Navbar = () => {
 	}
 	return (
 		<nav className="flex items-center justify-between">
-			<Logo />
+			<a className="cursor-pointer h-[60px] w-[60px]">
+				<img className="cursor-pointer" src="peruse.svg" />
+			</a>
 
 			{/* Navbar Search */}
 			<input
@@ -34,14 +36,14 @@ export const Navbar = () => {
 				placeholder="Quick Search your Books and Highlights"
 				type="text"
 				onChange={handleChange}
-				className={`text-lg w-3/5 ${styles.search}`}
+				className={`text-lg font-sfpro w-3/5 ${styles.search}`}
 			/>
 
 			{/* Navbar Buttons */}
 			<div>
 				{navButtons.map(button => {
 					return (
-						<span key={button.name} className="ml-3">
+						<span key={button.name} className="ml-4">
 							<IconButton
 								key={button.name}
 								name={button.name}

@@ -15,7 +15,7 @@ interface Props {
 
 export const Input = ({value, handleChange, placeholder, type, iconName, size, className}: Props) => {
 	return (
-		<div className={styles['container']}>
+		<div className={styles.container}>
 			<input
 				className={`${styles['input']} ${className}`}
 				type={type}
@@ -23,7 +23,7 @@ export const Input = ({value, handleChange, placeholder, type, iconName, size, c
 				value={value}
 				onChange={handleChange}
 			/>
-			<span className={`${styles['icon']} material-icons-outlined`}>{iconName}</span>
+			<span className={`${styles.icon} material-icons-outlined`}>{iconName}</span>
 		</div>
 	)
 }
