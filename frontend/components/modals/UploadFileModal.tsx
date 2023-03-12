@@ -1,13 +1,8 @@
 import React, {PropsWithChildren} from 'react'
 import {Card} from 'components'
 
+import {ModalProps} from 'types'
 import styles from './Modal.module.scss'
-
-interface Props {
-	title?: string
-	size?: 'xs' | 'sm' | 'md' | 'lg'
-	onClose?: Function
-}
 
 /**
  * Modal provides the bare-bone functionality such as onClose function, close on outside click and basic styling.
@@ -16,7 +11,7 @@ interface Props {
  * @param {("xs" | "sm" | "md" | "lg")}     size
  * @param {function}                        onCLose
  */
-export const UploadFileModal = ({title, size = 'md', onClose, children}: PropsWithChildren<Props>) => {
+export const UploadFileModal = ({title, size = 'md', onClose, children}: PropsWithChildren<ModalProps>) => {
 	return (
 		/** Modal Overlay to blur the background of modal and also to close modal when clicked outside */
 		<div onClick={() => onClose && onClose()} className={`${styles.overlay}`}>

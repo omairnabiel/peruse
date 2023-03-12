@@ -1,7 +1,6 @@
 import {UploadFileModal} from 'components'
 import {useRecoilState} from 'recoil'
 import {modalState} from 'recoil/modals'
-import {ModalType} from 'types'
 
 export const Modal = () => {
 	let currentModal

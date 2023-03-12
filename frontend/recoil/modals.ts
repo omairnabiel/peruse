@@ -1,13 +1,9 @@
 import {atom} from 'recoil'
-import {ModalType} from 'types'
+import {ModalProps, ModalType} from 'types'
 
 interface Modal {
 	modalType: ModalType | null
-	modalProps?: {
-		title?: string
-		size?: 'xs' | 'sm' | 'md' | 'lg'
-		onClose: Function
-	}
+	modalProps?: ModalProps
 }
 
 export const modalState = atom<Modal | null>({
