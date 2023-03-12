@@ -6,7 +6,7 @@ import {ModalType} from 'types'
 export const Modal = () => {
 	let currentModal
 	const [modal] = useRecoilState(modalState)
-	console.log('Current Modal', modal?.modalType)
+
 	switch (modal?.modalType) {
 		case 'UploadFileModal':
 			currentModal = (
