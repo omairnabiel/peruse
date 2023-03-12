@@ -1,5 +1,6 @@
 import {useState} from 'react'
-import {Select, Spacer} from '../components'
+// import {Select, Spacer} from '../components'
+import {Select} from 'components'
 import {Navbar, Books} from '../widgets'
 import {Option} from '../types'
 import {Highlights} from '../widgets/highlights/Highlights'
@@ -48,12 +49,13 @@ export default function Home() {
 	return (
 		<>
 			<div className="pl-36 pr-36">
-				<Navbar />
-				<Spacer marginTop="6" marginBottom="6" />
+				<div className="my-6">
+					<Navbar />
+				</div>
 
 				{/* Filter Buttons Bar */}
-				<Spacer marginTop="2" />
 				<div
+					className="my-4"
 					style={{
 						display: 'flex',
 						paddingBottom: 4,
@@ -71,7 +73,6 @@ export default function Home() {
 						/>
 					</div>
 				</div>
-				<Spacer marginBottom="2" />
 
 				{selected === 'books' ? <Books /> : <Highlights />}
 			</div>
