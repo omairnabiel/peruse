@@ -22,7 +22,7 @@ const Books = () => {
 							setModal({
 								modalType: 'UploadFileModal',
 								modalProps: {
-									size: 'md',
+									size: 'sm',
 									title: 'Upload File',
 									onClose: () => setModal({modalType: null}),
 								},

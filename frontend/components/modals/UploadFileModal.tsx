@@ -15,8 +15,9 @@ export const UploadFileModal = ({title, size = 'md', onClose, children}: PropsWi
 	return (
 		/** Modal Overlay to blur the background of modal and also to close modal when clicked outside */
 		<div onClick={() => onClose && onClose()} className={`${styles.overlay}`}>
-			<div className={styles[size]}>
-				<Card>
+			{/* Prevent propgation of any click from within the Modal to onClose() */}
+			<div className={`${styles[size]} ${styles.modal}`} onClick={e => e.stopPropagation()}>
+				<Card className="text-center p-28">
 					{/* Header */}
 					<div className={styles.header}>
 						<div>{title}</div>
